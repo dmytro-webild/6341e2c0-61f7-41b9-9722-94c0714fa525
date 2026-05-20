@@ -53,8 +53,8 @@ export default function LandingPage() {
               { imageSrc: "http://img.b2bpic.net/free-photo/yellow-paper-leaflets-brown-table_23-2147945125.jpg", imageAlt: "Finitions" },
               { imageSrc: "http://img.b2bpic.net/free-photo/blank-letterhead-business-cards-isolated-white_211682-244.jpg", imageAlt: "Papeterie" },
               { imageSrc: "http://img.b2bpic.net/free-photo/beautiful-concept-with-prism-dispersing-light_23-2148599232.jpg", imageAlt: "Technologie" },
-              { imageSrc: "http://img.b2bpic.net/free-photo/top-view-art-supplies-concept_23-2148577713.jpg", imageAlt: "Création" },
-              { imageSrc: "http://img.b2bpic.net/free-photo/minimalist-black-office-desk-with-notebook_23-2151968893.jpg", imageAlt: "Bureau" }
+              { imageSrc: "http://img.b2bpic.net/free-photo/top-view-art-supplies-concept_23-2148577713.jpg?_wi=1", imageAlt: "Création" },
+              { imageSrc: "http://img.b2bpic.net/free-photo/minimalist-black-office-desk-with-notebook_23-2151968893.jpg?_wi=1", imageAlt: "Bureau" }
             ]}
           />
         </div>
@@ -93,8 +93,8 @@ export default function LandingPage() {
               { id: "p2", name: "Brochures", price: "Sur devis", imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/no-image.jpg?id=aydbtc" },
               { id: "p3", name: "Affiches grand format", price: "à partir de 15€", imageSrc: "http://img.b2bpic.net/free-photo/mexican-traditional-cards-game_23-2150558664.jpg" },
               { id: "p4", name: "Flyers publicitaires", price: "à partir de 30€", imageSrc: "http://img.b2bpic.net/free-vector/mega-collection-corporate-flyers-templates-design-business-reports-presentation_1302-4674.jpg" },
-              { id: "p5", name: "Pochettes dossier", price: "Sur devis", imageSrc: "http://img.b2bpic.net/free-photo/minimalist-black-office-desk-with-notebook_23-2151968893.jpg" },
-              { id: "p6", name: "Stickers personnalisés", price: "à partir de 20€", imageSrc: "http://img.b2bpic.net/free-photo/top-view-art-supplies-concept_23-2148577713.jpg" }
+              { id: "p5", name: "Pochettes dossier", price: "Sur devis", imageSrc: "http://img.b2bpic.net/free-photo/minimalist-black-office-desk-with-notebook_23-2151968893.jpg?_wi=2" },
+              { id: "p6", name: "Stickers personnalisés", price: "à partir de 20€", imageSrc: "http://img.b2bpic.net/free-photo/top-view-art-supplies-concept_23-2148577713.jpg?_wi=2" }
             ]}
             title="Catalogue produit"
             description="Découvrez nos solutions standards pour tous vos besoins."
