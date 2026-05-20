@@ -2,17 +2,16 @@
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import ReactLenis from "lenis/react";
-import ContactCenter from '@/components/sections/contact/ContactCenter';
+import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FaqDouble from '@/components/sections/faq/FaqDouble';
-import FeatureBorderGlow from '@/components/sections/feature/featureBorderGlow/FeatureBorderGlow';
+import FeatureCardTwentyThree from '@/components/sections/feature/FeatureCardTwentyThree';
 import FooterLogoEmphasis from '@/components/sections/footer/FooterLogoEmphasis';
 import HeroBillboardCarousel from '@/components/sections/hero/HeroBillboardCarousel';
 import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
-import ProductCardThree from '@/components/sections/product/ProductCardThree';
-import SocialProofOne from '@/components/sections/socialProof/SocialProofOne';
-import TestimonialCardTwelve from '@/components/sections/testimonial/TestimonialCardTwelve';
-import TextAbout from '@/components/sections/about/TextAbout';
-import { FileText, Palette, Printer } from "lucide-react";
+import ProductCardTwo from '@/components/sections/product/ProductCardTwo';
+import TestimonialCardSixteen from '@/components/sections/testimonial/TestimonialCardSixteen';
+import MediaAbout from '@/components/sections/about/MediaAbout';
+import { FileText, Palette, Printer, CheckCircle, Zap, Star } from "lucide-react";
 
 export default function LandingPage() {
   return (
@@ -33,8 +32,9 @@ export default function LandingPage() {
           <NavbarLayoutFloatingInline
             navItems={[
               { name: "Accueil", id: "hero" },
-              { name: "Services", id: "features" },
-              { name: "Catalogue", id: "products" },
+              { name: "Réalisations", id: "products" },
+              { name: "Processus", id: "features" },
+              { name: "Avis", id: "testimonials" },
               { name: "Contact", id: "contact" },
             ]}
             brandName="Maison d'Imprimeur"
@@ -47,116 +47,85 @@ export default function LandingPage() {
             background={{ variant: "rotated-rays-animated" }}
             title="L'art de l'impression, sublimé"
             description="De la conception graphique à la finition artisanale, nous transformons vos idées en supports palpables d'exception."
-            buttons={[{ text: "Découvrir notre savoir-faire", href: "#about" }, { text: "Voir le catalogue", href: "#products" }]}
+            buttons={[{ text: "Découvrir notre savoir-faire", href: "#about" }, { text: "Voir nos réalisations", href: "#products" }]}
             mediaItems={[
               { imageSrc: "http://img.b2bpic.net/free-photo/man-working-printing-house-with-paper-paints_1303-26577.jpg", imageAlt: "Impression Offset" },
               { imageSrc: "http://img.b2bpic.net/free-photo/yellow-paper-leaflets-brown-table_23-2147945125.jpg", imageAlt: "Finitions" },
-              { imageSrc: "http://img.b2bpic.net/free-photo/blank-letterhead-business-cards-isolated-white_211682-244.jpg", imageAlt: "Papeterie" },
-              { imageSrc: "http://img.b2bpic.net/free-photo/beautiful-concept-with-prism-dispersing-light_23-2148599232.jpg", imageAlt: "Technologie" },
-              { imageSrc: "http://img.b2bpic.net/free-photo/top-view-art-supplies-concept_23-2148577713.jpg?_wi=1", imageAlt: "Création" },
-              { imageSrc: "http://img.b2bpic.net/free-photo/minimalist-black-office-desk-with-notebook_23-2151968893.jpg?_wi=1", imageAlt: "Bureau" }
+              { imageSrc: "http://img.b2bpic.net/free-photo/blank-letterhead-business-cards-isolated-white_211682-244.jpg", imageAlt: "Papeterie" }
             ]}
           />
         </div>
 
         <div id="about" data-section="about">
-          <TextAbout
+          <MediaAbout
             useInvertedBackground={false}
             title="Une expertise dédiée au papier"
+            description="Nous allions savoir-faire traditionnel et technologies modernes pour des projets d'impression qui marquent les esprits. Chaque détail est pensé pour sublimer votre identité."
+            imageSrc="http://img.b2bpic.net/free-photo/designer-working-office_1134-45.jpg"
             buttons={[{ text: "En savoir plus", href: "#contact" }]}
           />
         </div>
 
         <div id="features" data-section="features">
-          <FeatureBorderGlow
+          <FeatureCardTwentyThree
             animationType="slide-up"
             textboxLayout="split"
             useInvertedBackground={false}
+            title="Notre processus en 3 étapes"
+            description="De la première idée jusqu'à la livraison finale, nous vous accompagnons avec rigueur."
             features={[
-              { icon: Printer, title: "Impression Offset", description: "Pour vos grands tirages et projets de haute qualité." },
-              { icon: Palette, title: "Design Graphique", description: "Conception de vos visuels par nos experts." },
-              { icon: FileText, title: "Finitions Premium", description: "Dorure, gaufrage et découpe laser sur mesure." }
+              { id: "s1", title: "1. Consultation Créative", tags: ["Expertise"], imageSrc: "http://img.b2bpic.net/free-photo/brainstorming-session-office_1134-46.jpg" },
+              { id: "s2", title: "2. Impression Haute Fidélité", tags: ["Qualité"], imageSrc: "http://img.b2bpic.net/free-photo/printing-machinery-close-up_1134-47.jpg" },
+              { id: "s3", title: "3. Finitions Artisanales", tags: ["Précision"], imageSrc: "http://img.b2bpic.net/free-photo/finishing-details-printing_1134-48.jpg" }
             ]}
-            title="Nos services d'impression"
-            description="Nous accompagnons les entreprises et les particuliers avec une large gamme de solutions graphiques."
           />
         </div>
 
         <div id="products" data-section="products">
-          <ProductCardThree
+          <ProductCardTwo
             animationType="slide-up"
-            textboxLayout="default"
-            gridVariant="three-columns-all-equal-width"
-            useInvertedBackground={false}
+            textboxLayout="split"
+            gridVariant="asymmetric-60-wide-40-narrow"
+            title="Nos Réalisations"
+            description="Découvrez nos derniers travaux d'impression et projets graphiques réalisés pour nos clients."
             products={[
-              { id: "p1", name: "Cartes de visite", price: "Demander un devis", imageSrc: "http://img.b2bpic.net/free-photo/set-empty-business-cards-wooden-background_1203-1935.jpg", priceButtonProps: { href: "#contact", text: "Demander un devis" } },
-              { id: "p2", name: "Brochures", price: "Demander un devis", imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/no-image.jpg?id=aydbtc", priceButtonProps: { href: "#contact", text: "Demander un devis" } },
-              { id: "p3", name: "Affiches grand format", price: "Demander un devis", imageSrc: "http://img.b2bpic.net/free-photo/mexican-traditional-cards-game_23-2150558664.jpg", priceButtonProps: { href: "#contact", text: "Demander un devis" } },
-              { id: "p4", name: "Flyers publicitaires", price: "Demander un devis", imageSrc: "http://img.b2bpic.net/free-vector/mega-collection-corporate-flyers-templates-design-business-reports-presentation_1302-4674.jpg", priceButtonProps: { href: "#contact", text: "Demander un devis" } },
-              { id: "p5", name: "Pochettes dossier", price: "Demander un devis", imageSrc: "http://img.b2bpic.net/free-photo/minimalist-black-office-desk-with-notebook_23-2151968893.jpg?_wi=2", priceButtonProps: { href: "#contact", text: "Demander un devis" } },
-              { id: "p6", name: "Stickers personnalisés", price: "Demander un devis", imageSrc: "http://img.b2bpic.net/free-photo/top-view-art-supplies-concept_23-2148577713.jpg?_wi=2", priceButtonProps: { href: "#contact", text: "Demander un devis" } }
+              { id: "p1", brand: "Événementiel", name: "Invitation Luxe", price: "Sur demande", rating: 5, imageSrc: "http://img.b2bpic.net/free-photo/set-empty-business-cards-wooden-background_1203-1935.jpg" },
+              { id: "p2", brand: "Corporate", name: "Catalogue Prestige", price: "Sur demande", rating: 5, imageSrc: "http://img.b2bpic.net/free-photo/man-working-printing-house-with-paper-paints_1303-26577.jpg" },
+              { id: "p3", brand: "Retail", name: "Packaging sur-mesure", price: "Sur demande", rating: 4, imageSrc: "http://img.b2bpic.net/free-photo/minimalist-black-office-desk-with-notebook_23-2151968893.jpg" }
             ]}
-            title="Catalogue produit"
-            description="Découvrez nos solutions standards pour tous vos besoins."
-          />
-        </div>
-
-        <div id="social-proof" data-section="social-proof">
-          <SocialProofOne
-            textboxLayout="default"
-            useInvertedBackground={false}
-            names={["PrintExpert", "GraphiquePro", "CreativeAgency", "StudioPub", "AtelierPaper", "LogistikGroup", "MediaPress"]}
-            title="Ils nous font confiance"
-            description="Partenaires de longue date et entreprises locales."
           />
         </div>
 
         <div id="testimonials" data-section="testimonials">
-          <TestimonialCardTwelve
+          <TestimonialCardSixteen
             useInvertedBackground={false}
+            animationType="slide-up"
+            textboxLayout="split"
+            title="La satisfaction est notre signature"
+            description="Découvrez ce que disent nos clients de notre expertise."
+            kpiItems={[{ label: "Années d'expérience", value: "15+" }, { label: "Projets réalisés", value: "2000+" }, { label: "Clients satisfaits", value: "99%" }]}
             testimonials={[
-              { id: "1", name: "Julie D.", imageSrc: "http://img.b2bpic.net/free-photo/woman-telling-secret-holding-paper-bag_23-2148316744.jpg" },
-              { id: "2", name: "Marc L.", imageSrc: "http://img.b2bpic.net/free-photo/happy-man-with-thumbs-up_1187-3144.jpg" },
-              { id: "3", name: "Sophie P.", imageSrc: "http://img.b2bpic.net/free-photo/closeup-happy-middle-aged-business-leader_1262-4823.jpg" },
-              { id: "4", name: "Thomas G.", imageSrc: "http://img.b2bpic.net/free-photo/happy-employee_1098-16109.jpg" },
-              { id: "5", name: "Claire V.", imageSrc: "http://img.b2bpic.net/free-photo/positive-businesswoman-work_1098-3861.jpg" }
+              { id: "1", name: "Claire V.", role: "DA", company: "Agence Créative", rating: 5, imageSrc: "http://img.b2bpic.net/free-photo/positive-businesswoman-work_1098-3861.jpg" },
+              { id: "2", name: "Marc L.", role: "Dirigeant", company: "Tech Solutions", rating: 5, imageSrc: "http://img.b2bpic.net/free-photo/happy-man-with-thumbs-up_1187-3144.jpg" }
             ]}
-            cardTitle="Ce que disent nos clients"
-            cardTag="Avis Clients"
-            cardAnimation="blur-reveal"
-          />
-        </div>
-
-        <div id="faq" data-section="faq">
-          <FaqDouble
-            textboxLayout="default"
-            useInvertedBackground={false}
-            faqs={[
-              { id: "f1", title: "Quels sont les délais ?", content: "Nous traitons vos commandes en 3 à 5 jours ouvrés selon le volume." },
-              { id: "f2", title: "Livrez-vous partout ?", content: "Oui, nous expédions sur toute la France métropolitaine." },
-              { id: "f3", title: "Quels fichiers accepter ?", content: "PDF, AI, et PSD haute résolution sont recommandés." }
-            ]}
-            title="Questions fréquentes"
-            description="Tout ce que vous devez savoir avant de lancer votre impression."
-            faqsAnimation="slide-up"
           />
         </div>
 
         <div id="contact" data-section="contact">
-          <ContactCenter
+          <ContactSplit
             useInvertedBackground={false}
-            background={{ variant: "plain" }}
-            tag="Contact"
-            title="Demandez votre devis"
-            description="Envoyez-nous vos spécifications, nous reviendrons vers vous avec une offre personnalisée."
+            title="Obtenir un devis"
+            description="Remplissez ce formulaire pour nous transmettre vos besoins. Un conseiller prendra contact avec vous sous 24h."
+            imageSrc="http://img.b2bpic.net/free-photo/happy-business-people-meeting_1134-29.jpg"
+            onSubmit={(email) => console.log("Form submitted with email:", email)}
           />
         </div>
 
         <div id="footer" data-section="footer">
           <FooterLogoEmphasis
             columns={[
-              { items: [{ label: "Services", href: "#features" }, { label: "Catalogue", href: "#products" }] },
-              { items: [{ label: "Contact", href: "#contact" }, { label: "Mentions Légales", href: "#" }] }
+              { title: "Navigation", items: [{ label: "Services", href: "#features" }, { label: "Réalisations", href: "#products" }] },
+              { title: "Informations", items: [{ label: "Contact", href: "#contact" }, { label: "Mentions Légales", href: "#" }] }
             ]}
             logoText="Maison d'Imprimeur"
           />
