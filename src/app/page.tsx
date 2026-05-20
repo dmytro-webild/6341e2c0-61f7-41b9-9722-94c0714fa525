@@ -44,6 +44,7 @@ export default function LandingPage() {
           <HeroBillboardCarousel
             title="L'art de l'impression, sublimé"
             description="De la conception graphique à la finition artisanale, nous transformons vos idées en supports palpables d'exception."
+            background={{ variant: "plain" }}
             buttons={[{ text: "Découvrir notre savoir-faire", href: "#about" }, { text: "Voir nos réalisations", href: "#products" }]}
             mediaItems={[
               { imageSrc: "http://img.b2bpic.net/free-photo/man-working-printing-house-with-paper-paints_1303-26577.jpg", imageAlt: "Impression Offset" },
@@ -82,6 +83,7 @@ export default function LandingPage() {
           <ProductCardTwo
             animationType="slide-up"
             textboxLayout="split"
+            useInvertedBackground={false}
             gridVariant="asymmetric-60-wide-40-narrow"
             title="Nos Réalisations"
             description="Découvrez nos derniers travaux d'impression et projets graphiques réalisés pour nos clients."
@@ -115,6 +117,8 @@ export default function LandingPage() {
             description="Remplissez ce formulaire pour nous transmettre vos besoins. Un conseiller prendra contact avec vous sous 24h."
             imageSrc="http://img.b2bpic.net/free-photo/happy-business-people-meeting_1134-29.jpg"
             onSubmit={(email) => console.log("Form submitted with email:", email)}
+            useInvertedBackground={false}
+            background={{ variant: "plain" }}
           />
         </div>
 
