@@ -6,7 +6,7 @@ import ContactCenter from '@/components/sections/contact/ContactCenter';
 import FaqDouble from '@/components/sections/faq/FaqDouble';
 import FeatureBorderGlow from '@/components/sections/feature/featureBorderGlow/FeatureBorderGlow';
 import FooterLogoEmphasis from '@/components/sections/footer/FooterLogoEmphasis';
-import HeroBillboardRotatedCarousel from '@/components/sections/hero/HeroBillboardRotatedCarousel';
+import HeroBillboardCarousel from '@/components/sections/hero/HeroBillboardCarousel';
 import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
 import ProductCardThree from '@/components/sections/product/ProductCardThree';
 import SocialProofOne from '@/components/sections/socialProof/SocialProofOne';
@@ -43,18 +43,18 @@ export default function LandingPage() {
         </div>
 
         <div id="hero" data-section="hero">
-          <HeroBillboardRotatedCarousel
+          <HeroBillboardCarousel
             background={{ variant: "rotated-rays-animated" }}
-            title="L'excellence en impression sur mesure"
-            description="Donnez vie à vos projets avec notre expertise en imprimerie de haute précision, combinant tradition artisanale et technologie moderne."
-            buttons={[{ text: "Voir nos catalogues", href: "#products" }]}
-            carouselItems={[
-              { id: "1", imageSrc: "http://img.b2bpic.net/free-photo/man-working-printing-house-with-paper-paints_1303-26577.jpg", imageAlt: "Impression offset" },
-              { id: "2", imageSrc: "http://img.b2bpic.net/free-photo/yellow-paper-leaflets-brown-table_23-2147945125.jpg", imageAlt: "Finitions premium" },
-              { id: "3", imageSrc: "http://img.b2bpic.net/free-photo/blank-letterhead-business-cards-isolated-white_211682-244.jpg", imageAlt: "Papeterie haut de gamme" },
-              { id: "4", imageSrc: "http://img.b2bpic.net/free-photo/people-working-call-center_23-2149288189.jpg", imageAlt: "Service client" },
-              { id: "5", imageSrc: "http://img.b2bpic.net/free-photo/close-up-perforated-fabric_23-2149894569.jpg", imageAlt: "Grand format" },
-              { id: "6", imageSrc: "http://img.b2bpic.net/free-photo/beautiful-concept-with-prism-dispersing-light_23-2148599232.jpg", imageAlt: "Technologie d'impression" }
+            title="L'art de l'impression, sublimé"
+            description="De la conception graphique à la finition artisanale, nous transformons vos idées en supports palpables d'exception."
+            buttons={[{ text: "Découvrir notre savoir-faire", href: "#about" }, { text: "Voir le catalogue", href: "#products" }]}
+            mediaItems={[
+              { imageSrc: "http://img.b2bpic.net/free-photo/man-working-printing-house-with-paper-paints_1303-26577.jpg", imageAlt: "Impression Offset" },
+              { imageSrc: "http://img.b2bpic.net/free-photo/yellow-paper-leaflets-brown-table_23-2147945125.jpg", imageAlt: "Finitions" },
+              { imageSrc: "http://img.b2bpic.net/free-photo/blank-letterhead-business-cards-isolated-white_211682-244.jpg", imageAlt: "Papeterie" },
+              { imageSrc: "http://img.b2bpic.net/free-photo/beautiful-concept-with-prism-dispersing-light_23-2148599232.jpg", imageAlt: "Technologie" },
+              { imageSrc: "http://img.b2bpic.net/free-photo/top-view-art-supplies-concept_23-2148577713.jpg", imageAlt: "Création" },
+              { imageSrc: "http://img.b2bpic.net/free-photo/minimalist-black-office-desk-with-notebook_23-2151968893.jpg", imageAlt: "Bureau" }
             ]}
           />
         </div>
