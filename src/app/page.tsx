@@ -89,12 +89,12 @@ export default function LandingPage() {
             gridVariant="three-columns-all-equal-width"
             useInvertedBackground={false}
             products={[
-              { id: "p1", name: "Cartes de visite", price: "à partir de 45€", imageSrc: "http://img.b2bpic.net/free-photo/set-empty-business-cards-wooden-background_1203-1935.jpg" },
-              { id: "p2", name: "Brochures", price: "Sur devis", imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/no-image.jpg?id=aydbtc" },
-              { id: "p3", name: "Affiches grand format", price: "à partir de 15€", imageSrc: "http://img.b2bpic.net/free-photo/mexican-traditional-cards-game_23-2150558664.jpg" },
-              { id: "p4", name: "Flyers publicitaires", price: "à partir de 30€", imageSrc: "http://img.b2bpic.net/free-vector/mega-collection-corporate-flyers-templates-design-business-reports-presentation_1302-4674.jpg" },
-              { id: "p5", name: "Pochettes dossier", price: "Sur devis", imageSrc: "http://img.b2bpic.net/free-photo/minimalist-black-office-desk-with-notebook_23-2151968893.jpg?_wi=2" },
-              { id: "p6", name: "Stickers personnalisés", price: "à partir de 20€", imageSrc: "http://img.b2bpic.net/free-photo/top-view-art-supplies-concept_23-2148577713.jpg?_wi=2" }
+              { id: "p1", name: "Cartes de visite", price: "Demander un devis", imageSrc: "http://img.b2bpic.net/free-photo/set-empty-business-cards-wooden-background_1203-1935.jpg", priceButtonProps: { href: "#contact", text: "Demander un devis" } },
+              { id: "p2", name: "Brochures", price: "Demander un devis", imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/default/no-image.jpg?id=aydbtc", priceButtonProps: { href: "#contact", text: "Demander un devis" } },
+              { id: "p3", name: "Affiches grand format", price: "Demander un devis", imageSrc: "http://img.b2bpic.net/free-photo/mexican-traditional-cards-game_23-2150558664.jpg", priceButtonProps: { href: "#contact", text: "Demander un devis" } },
+              { id: "p4", name: "Flyers publicitaires", price: "Demander un devis", imageSrc: "http://img.b2bpic.net/free-vector/mega-collection-corporate-flyers-templates-design-business-reports-presentation_1302-4674.jpg", priceButtonProps: { href: "#contact", text: "Demander un devis" } },
+              { id: "p5", name: "Pochettes dossier", price: "Demander un devis", imageSrc: "http://img.b2bpic.net/free-photo/minimalist-black-office-desk-with-notebook_23-2151968893.jpg?_wi=2", priceButtonProps: { href: "#contact", text: "Demander un devis" } },
+              { id: "p6", name: "Stickers personnalisés", price: "Demander un devis", imageSrc: "http://img.b2bpic.net/free-photo/top-view-art-supplies-concept_23-2148577713.jpg?_wi=2", priceButtonProps: { href: "#contact", text: "Demander un devis" } }
             ]}
             title="Catalogue produit"
             description="Découvrez nos solutions standards pour tous vos besoins."
