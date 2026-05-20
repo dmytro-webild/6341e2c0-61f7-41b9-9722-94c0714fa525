@@ -47,7 +47,7 @@ export default function LandingPage() {
             background={{ variant: "plain" }}
             buttons={[{ text: "Découvrir notre savoir-faire", href: "#about" }, { text: "Voir nos réalisations", href: "#products" }]}
             mediaItems={[
-              { imageSrc: "http://img.b2bpic.net/free-photo/man-working-printing-house-with-paper-paints_1303-26577.jpg", imageAlt: "Impression Offset" },
+              { imageSrc: "http://img.b2bpic.net/free-photo/man-working-printing-house-with-paper-paints_1303-26577.jpg?_wi=1", imageAlt: "Impression Offset" },
               { imageSrc: "http://img.b2bpic.net/free-photo/yellow-paper-leaflets-brown-table_23-2147945125.jpg", imageAlt: "Finitions" },
               { imageSrc: "http://img.b2bpic.net/free-photo/blank-letterhead-business-cards-isolated-white_211682-244.jpg", imageAlt: "Papeterie" }
             ]}
@@ -89,7 +89,7 @@ export default function LandingPage() {
             description="Découvrez nos derniers travaux d'impression et projets graphiques réalisés pour nos clients."
             products={[
               { id: "p1", brand: "Événementiel", name: "Invitation Luxe", price: "Sur demande", rating: 5, reviewCount: "12", imageSrc: "http://img.b2bpic.net/free-photo/set-empty-business-cards-wooden-background_1203-1935.jpg" },
-              { id: "p2", brand: "Corporate", name: "Catalogue Prestige", price: "Sur demande", rating: 5, reviewCount: "25", imageSrc: "http://img.b2bpic.net/free-photo/man-working-printing-house-with-paper-paints_1303-26577.jpg" },
+              { id: "p2", brand: "Corporate", name: "Catalogue Prestige", price: "Sur demande", rating: 5, reviewCount: "25", imageSrc: "http://img.b2bpic.net/free-photo/man-working-printing-house-with-paper-paints_1303-26577.jpg?_wi=2" },
               { id: "p3", brand: "Retail", name: "Packaging sur-mesure", price: "Sur demande", rating: 4, reviewCount: "18", imageSrc: "http://img.b2bpic.net/free-photo/minimalist-black-office-desk-with-notebook_23-2151968893.jpg" }
             ]}
           />
