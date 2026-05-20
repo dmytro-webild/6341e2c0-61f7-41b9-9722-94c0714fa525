@@ -16,14 +16,14 @@ export default function LandingPage() {
     <ThemeProvider
         defaultButtonVariant="hover-magnetic"
         defaultTextAnimation="reveal-blur"
-        borderRadius="pill"
+        borderRadius="rounded"
         contentWidth="mediumLarge"
-        sizing="largeSmallSizeMediumTitles"
-        background="grid"
-        cardStyle="soft-shadow"
-        primaryButtonStyle="flat"
-        secondaryButtonStyle="radial-glow"
-        headingFontWeight="extrabold"
+        sizing="medium"
+        background="none"
+        cardStyle="solid"
+        primaryButtonStyle="gradient"
+        secondaryButtonStyle="solid"
+        headingFontWeight="semibold"
     >
       <ReactLenis root>
         <div id="nav" data-section="nav">
