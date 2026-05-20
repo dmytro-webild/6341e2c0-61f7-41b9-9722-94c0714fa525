@@ -3,7 +3,6 @@
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import ReactLenis from "lenis/react";
 import ContactSplit from '@/components/sections/contact/ContactSplit';
-import FaqDouble from '@/components/sections/faq/FaqDouble';
 import FeatureCardTwentyThree from '@/components/sections/feature/FeatureCardTwentyThree';
 import FooterLogoEmphasis from '@/components/sections/footer/FooterLogoEmphasis';
 import HeroBillboardCarousel from '@/components/sections/hero/HeroBillboardCarousel';
@@ -11,7 +10,6 @@ import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloating
 import ProductCardTwo from '@/components/sections/product/ProductCardTwo';
 import TestimonialCardSixteen from '@/components/sections/testimonial/TestimonialCardSixteen';
 import MediaAbout from '@/components/sections/about/MediaAbout';
-import { FileText, Palette, Printer, CheckCircle, Zap, Star } from "lucide-react";
 
 export default function LandingPage() {
   return (
@@ -44,7 +42,6 @@ export default function LandingPage() {
 
         <div id="hero" data-section="hero">
           <HeroBillboardCarousel
-            background={{ variant: "rotated-rays-animated" }}
             title="L'art de l'impression, sublimé"
             description="De la conception graphique à la finition artisanale, nous transformons vos idées en supports palpables d'exception."
             buttons={[{ text: "Découvrir notre savoir-faire", href: "#about" }, { text: "Voir nos réalisations", href: "#products" }]}
@@ -89,9 +86,9 @@ export default function LandingPage() {
             title="Nos Réalisations"
             description="Découvrez nos derniers travaux d'impression et projets graphiques réalisés pour nos clients."
             products={[
-              { id: "p1", brand: "Événementiel", name: "Invitation Luxe", price: "Sur demande", rating: 5, imageSrc: "http://img.b2bpic.net/free-photo/set-empty-business-cards-wooden-background_1203-1935.jpg" },
-              { id: "p2", brand: "Corporate", name: "Catalogue Prestige", price: "Sur demande", rating: 5, imageSrc: "http://img.b2bpic.net/free-photo/man-working-printing-house-with-paper-paints_1303-26577.jpg" },
-              { id: "p3", brand: "Retail", name: "Packaging sur-mesure", price: "Sur demande", rating: 4, imageSrc: "http://img.b2bpic.net/free-photo/minimalist-black-office-desk-with-notebook_23-2151968893.jpg" }
+              { id: "p1", brand: "Événementiel", name: "Invitation Luxe", price: "Sur demande", rating: 5, reviewCount: "12", imageSrc: "http://img.b2bpic.net/free-photo/set-empty-business-cards-wooden-background_1203-1935.jpg" },
+              { id: "p2", brand: "Corporate", name: "Catalogue Prestige", price: "Sur demande", rating: 5, reviewCount: "25", imageSrc: "http://img.b2bpic.net/free-photo/man-working-printing-house-with-paper-paints_1303-26577.jpg" },
+              { id: "p3", brand: "Retail", name: "Packaging sur-mesure", price: "Sur demande", rating: 4, reviewCount: "18", imageSrc: "http://img.b2bpic.net/free-photo/minimalist-black-office-desk-with-notebook_23-2151968893.jpg" }
             ]}
           />
         </div>
@@ -113,7 +110,7 @@ export default function LandingPage() {
 
         <div id="contact" data-section="contact">
           <ContactSplit
-            useInvertedBackground={false}
+            tag="Contact"
             title="Obtenir un devis"
             description="Remplissez ce formulaire pour nous transmettre vos besoins. Un conseiller prendra contact avec vous sous 24h."
             imageSrc="http://img.b2bpic.net/free-photo/happy-business-people-meeting_1134-29.jpg"
@@ -124,8 +121,8 @@ export default function LandingPage() {
         <div id="footer" data-section="footer">
           <FooterLogoEmphasis
             columns={[
-              { title: "Navigation", items: [{ label: "Services", href: "#features" }, { label: "Réalisations", href: "#products" }] },
-              { title: "Informations", items: [{ label: "Contact", href: "#contact" }, { label: "Mentions Légales", href: "#" }] }
+              { items: [{ label: "Services", href: "#features" }, { label: "Réalisations", href: "#products" }] },
+              { items: [{ label: "Contact", href: "#contact" }, { label: "Mentions Légales", href: "#" }] }
             ]}
             logoText="Maison d'Imprimeur"
           />
